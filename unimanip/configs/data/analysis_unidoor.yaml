@@ -1,0 +1,141 @@
+cabinet: # 22: 20 + 2
+  99613019962014/joint_1/REVOLUTE/link_1/handle_2: train/cabinet
+  99613029962036/joint_1/REVOLUTE/link_1/handle_2: train/cabinet
+  99613039962011/joint_1/REVOLUTE/link_1/handle_2: train/cabinet
+  99613049962007/joint_1/REVOLUTE/link_1/handle_2: train/cabinet
+  99613059962027/joint_1/REVOLUTE/link_1/handle_2: train/cabinet
+  99613069962022/joint_1/REVOLUTE/link_1/handle_2: train/cabinet
+  99613079962021/joint_1/REVOLUTE/link_1/handle_2: train/cabinet
+  99613089962017/joint_1/REVOLUTE/link_1/handle_2: train/cabinet
+  99613099962030/joint_1/REVOLUTE/link_1/handle_2: train/cabinet
+  99613109962006/joint_1/REVOLUTE/link_1/handle_2: train/cabinet
+  99613119962005/joint_1/REVOLUTE/link_1/handle_2: train/cabinet
+  99613129962035/joint_1/REVOLUTE/link_1/handle_2: train/cabinet
+  99613139962006/joint_1/REVOLUTE/link_1/handle_2: train/cabinet
+  99613149962001/joint_1/REVOLUTE/link_1/handle_2: train/cabinet
+  99613159962011/joint_1/REVOLUTE/link_1/handle_2: train/cabinet
+  99613169962009/joint_1/REVOLUTE/link_1/handle_2: train/cabinet
+  99613179962015/joint_1/REVOLUTE/link_1/handle_3: train/cabinet
+  99613189962025/joint_1/REVOLUTE/link_1/handle_2: train/cabinet
+  99613199962028/joint_1/REVOLUTE/link_1/handle_2: train/cabinet
+  99613209962014/joint_1/REVOLUTE/link_1/handle_2: train/cabinet
+  99613219962040/joint_1/REVOLUTE/link_1/handle_2: test/cabinet
+  99613409962041/joint_1/REVOLUTE/link_1/handle_2: test/cabinet
+
+car: # 12: 10 + 2
+  99670019968001/joint_1/REVOLUTE/link_1/handle_3: train/car
+  99670029968001/joint_1/REVOLUTE/link_1/handle_3: train/car
+  99670139968001/joint_1/REVOLUTE/link_1/handle_3: train/car
+  99670149968001/joint_1/REVOLUTE/link_1/handle_3: train/car
+  99670159968001/joint_1/REVOLUTE/link_1/handle_3: train/car
+  99670169968001/joint_1/REVOLUTE/link_1/handle_3: train/car
+  99670179968001/joint_1/REVOLUTE/link_1/handle_3: train/car
+  99670189968001/joint_1/REVOLUTE/link_1/handle_3: train/car
+  99670199968001/joint_1/REVOLUTE/link_1/handle_3: train/car
+  99670209968001/joint_1/REVOLUTE/link_1/handle_3: train/car
+  99670219968001/joint_1/REVOLUTE/link_1/handle_3: test/car
+  99670229968001/joint_1/REVOLUTE/link_1/handle_3: test/car
+
+fridge: # 10: 8 + 2
+  99614019960005/joint_1/REVOLUTE/link_1/handle_2: train/fridge
+  99614029960013/joint_1/REVOLUTE/link_1/handle_2: train/fridge
+  99614039960021/joint_1/REVOLUTE/link_1/handle_2: train/fridge
+  99614049960042/joint_1/REVOLUTE/link_1/handle_2: train/fridge
+  99614059960045/joint_1/REVOLUTE/link_1/handle_2: train/fridge
+  99614069961503/joint_1/REVOLUTE/link_1/handle_2: train/fridge
+  99614079961598/joint_1/REVOLUTE/link_1/handle_2: train/fridge
+  99614089960005/joint_1/REVOLUTE/link_1/handle_2: train/fridge
+  99614099960013/joint_1/REVOLUTE/link_1/handle_2: test/fridge
+  99614109960021/joint_1/REVOLUTE/link_1/handle_2: test/fridge
+
+lever_door: # 22: 18 + 4
+  99650019960001/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99650029960001/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99650039960001/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99650049960001/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99650059960001/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99650069960001/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99650079960001/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99650089960001/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99650099960001/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99655019960001/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99655029960001/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99655039960001/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99655049960001/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99655059960001/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99655069960001/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99655079960001/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99655089960001/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99655099960001/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99660019960001/joint_1/REVOLUTE/link_1/handle_2: test/door
+  99660029960001/joint_1/REVOLUTE/link_1/handle_2: test/door
+  99660039960001/joint_1/REVOLUTE/link_1/handle_2: test/door
+  99660049960001/joint_1/REVOLUTE/link_1/handle_2: test/door
+
+round_door: # 25: 20 + 5
+  99650019962002/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99650029962002/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99650039962002/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99650049962002/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99650059962002/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99650069962002/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99650079962002/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99650089962002/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99650099962002/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99655019962002/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99655029962002/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99655039962002/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99655049962002/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99655059962002/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99655069962002/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99655079962002/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99655089962002/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99655099962002/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99660019962002/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99660029962002/joint_1/REVOLUTE/link_1/handle_2: train/door
+  99660039962002/joint_1/REVOLUTE/link_1/handle_2: test/door
+  99660049962002/joint_1/REVOLUTE/link_1/handle_2: test/door
+  99660059962002/joint_1/REVOLUTE/link_1/handle_2: test/door
+  99660069962002/joint_1/REVOLUTE/link_1/handle_2: test/door
+  99660079962002/joint_1/REVOLUTE/link_1/handle_2: test/door
+
+safe: # 19: 15 + 4
+  99611129961204/joint_1/REVOLUTE/link_1/handle_2: train/safe
+  99611229961213/joint_1/REVOLUTE/link_1/handle_2: train/safe
+  99611279961229/joint_1/REVOLUTE/link_1/handle_2: train/safe
+  99611289961230/joint_1/REVOLUTE/link_1/handle_2: train/safe
+  99611329961234/joint_1/REVOLUTE/link_1/handle_2: train/safe
+  99611419961238/joint_1/REVOLUTE/link_1/handle_2: train/safe
+  99611519961206/joint_1/REVOLUTE/link_1/handle_2: train/safe
+  99611539961209/joint_1/REVOLUTE/link_1/handle_2: train/safe
+  99611549961210/joint_1/REVOLUTE/link_1/handle_2: train/safe
+  99611569961229/joint_1/REVOLUTE/link_1/handle_2: train/safe
+  99611619961214/joint_1/REVOLUTE/link_1/handle_2: train/safe
+  99611629961216/joint_1/REVOLUTE/link_1/handle_2: train/safe
+  99611649961234/joint_1/REVOLUTE/link_1/handle_2: train/safe
+  99611729961217/joint_1/REVOLUTE/link_1/handle_2: train/safe
+  99611799961218/joint_1/REVOLUTE/link_1/handle_2: train/safe
+  99611799961222/joint_1/REVOLUTE/link_1/handle_2: test/safe
+  99611799961224/joint_1/REVOLUTE/link_1/handle_2: test/safe
+  99611799961226/joint_1/REVOLUTE/link_1/handle_2: test/safe
+  99611799961228/joint_1/REVOLUTE/link_1/handle_2: test/safe
+
+window: # 18: 15 + 3
+  99690019969501/joint_1/REVOLUTE/link_1/handle_2: train/window
+  99690029969501/joint_1/REVOLUTE/link_1/handle_2: train/window
+  99690039969501/joint_1/REVOLUTE/link_1/handle_2: train/window
+  99690049969501/joint_1/REVOLUTE/link_1/handle_2: train/window
+  99690059969501/joint_1/REVOLUTE/link_1/handle_2: train/window
+  99690069969501/joint_1/REVOLUTE/link_1/handle_2: train/window
+  99690079969501/joint_1/REVOLUTE/link_1/handle_2: train/window
+  99690089969501/joint_1/REVOLUTE/link_1/handle_2: train/window
+  99690099969501/joint_1/REVOLUTE/link_1/handle_2: train/window
+  99690109969501/joint_1/REVOLUTE/link_1/handle_2: train/window
+  99690119969501/joint_1/REVOLUTE/link_1/handle_2: train/window
+  99690129969501/joint_1/REVOLUTE/link_1/handle_2: train/window
+  99690139969501/joint_1/REVOLUTE/link_1/handle_2: train/window
+  99690149969501/joint_1/REVOLUTE/link_1/handle_2: train/window
+  99690159969501/joint_1/REVOLUTE/link_1/handle_2: train/window
+  99690169969501/joint_1/REVOLUTE/link_1/handle_2: test/window
+  99690179969501/joint_1/REVOLUTE/link_1/handle_2: test/window
+  99690189969501/joint_1/REVOLUTE/link_1/handle_2: test/window

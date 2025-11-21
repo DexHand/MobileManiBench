@@ -1,0 +1,122 @@
+Infos:
+  name: MobileManiDataset/XHand_Robot/Best_0
+
+Agents:
+  name: Open
+
+  # run
+  empirical_normalization: True
+  num_steps_per_env: 16
+  max_iterations: 4000
+  save_interval: 4000
+
+  # policy
+  policy:
+    actor_hidden_dims: [1024, 1024, 512, 512]
+    critic_hidden_dims: [1024, 1024, 512, 512]
+    init_noise_std: 1.0
+    activation: elu
+
+  # algorithm
+  algorithm:
+    learning_rate: 0.001
+    num_learning_epochs: 8
+    num_mini_batches: 8
+    schedule: adaptive
+
+
+Envs:
+  # sim
+  dt_s: 60
+  decimation: 2
+
+  # space
+  action_space: 18
+  observation_space: 220
+
+  # run
+  action_type: open
+  episode_length_s: 10 # x 60fps
+
+  # viewer
+  viewer:
+    eye: [5., -5., 5.]
+    lookat: [0., 0., 0.]
+    resolution: [640, 640]
+
+  # object
+  object_infos:
+    # basic
+    type: None
+    group: None
+    index: 0
+    name: None
+    scale: 1.0
+    open_ratio: 0.6
+  
+  # control_params
+  control_params:
+    # # body
+    # linear_damping: 2.0  # 2.0
+    # angular_damping: 100.0  # 100.0
+    # max_depenetration_velocity: 0.0
+    # joint
+    slider_joint_stiffness: 50.0
+    slider_joint_damping: 10.0
+    arm_joint_stiffness: 100.0
+    arm_joint_damping: 10.0
+    hand_joint_stiffness: 1.0
+    hand_joint_damping: 1.0
+
+    # rotate base
+    rotate_base: True
+    rotate_base_angle: 180
+    slider_basex_joint_stiffness: 50.0
+    slider_basex_joint_damping: 10.0
+    slider_basey_joint_stiffness: 80.0
+    slider_basey_joint_damping: 10.0
+
+    # action scales
+    action_dof_scale: 1.0
+    action_pos_scale: 0.025
+    action_rot_scale: 0.025
+    
+    # settings
+    normalize_diff_object_goal: True
+    height_random_object: 0.5
+
+    # ycb
+    ycb_mass: 0.01
+    ycb_scale: 1.0
+    ycb_grasp_direction: [0.0, 1.0, 0.0]
+    rotate_init_palm: False
+
+  # reward_params
+  reward_params:
+    # reach action
+    diff_reach_pos_action: -0.1
+    diff_reach_rot_action: -0.1
+    diff_reach_joint_action: -0.1
+    diff_reach_palm_rot_action: -0.1
+
+    # move action
+    diff_move_pos_action: -0.1
+    diff_move_rot_action: -0.1
+
+    # hand object
+    diff_hand_object: -1.0
+    diff_hand_body_object: -0.0
+    diff_hand_thumb_object: -0.0
+    diff_hand_finger_object: -2.0
+
+    # object goal
+    diff_object_goal: -1.0
+
+    # grasp flag
+    dist_hand_object: 0.2
+    dist_thumb_object: 0.1
+    dist_finger_object: 0.1
+
+    # bonus
+    bonus_grasp_object: 1.0
+    bonus_object_goal: 2.0
