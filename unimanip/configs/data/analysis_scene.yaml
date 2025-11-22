@@ -197,7 +197,7 @@ object:
 
 
 room:
-  GenieSimAssets:
+  GenieSim:
     scenes/iros/base_factory:
       [
         {
@@ -380,7 +380,7 @@ room:
 
 
 
-  Isaac:
+  IsaacSim:
     Corner:
       [
         {
