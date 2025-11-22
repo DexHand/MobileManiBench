@@ -170,7 +170,7 @@ def main():
         from unimanip.utils.adaptive_ensemble import AdaptiveEnsembler
         from robovlms.model.vla_builder import build_vla, load_vla_checkpoint
         # load vla config
-        args_cli.vla_path = osp.join(LOG_DIR, 'UniManipLab/G1_Robot/Final_1/diffusionvla_depth_final/checkpoints/depth_final_TB80_B20_bf16True/checkpoints/epoch=11-step=80000.ckpt/weights.pt')
+        args_cli.vla_path = osp.join(LOG_DIR, '')
         # vla_config = load_json(osp.join(PROJECT_DIR, 'unimanip/configs/train/train_vla.json'))
         vla_config = load_json(osp.join(osp.dirname(osp.dirname(osp.dirname(args_cli.vla_path))), 'config.json'))
         vla_config['model_path']= vla_config['model_path'].replace('/mnt/blob/Desktop/Assets', ASSET_DIR)

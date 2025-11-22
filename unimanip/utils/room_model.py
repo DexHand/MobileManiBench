@@ -63,7 +63,7 @@ class RoomModel:
         elif self.room_infos['group'] == 'GenieSim':
             self.room_infos['usd_path'] = osp.join(ASSET_DIR, 'room/GenieSim/{}/scene.usda'.format(self.room_infos['name']))
             if self.room_infos['name'] in ['scenes/iros/base_factory', 'scenes/iros/sofa_table']:
-                self.room_infos['usd_path'] = osp.join(ASSET_DIR, 'room/GenieSimAssets/{}_scene.usda'.format(self.room_infos['name']))
+                self.room_infos['usd_path'] = osp.join(ASSET_DIR, 'room/GenieSim/{}_scene.usda'.format(self.room_infos['name']))
         return self.room_infos
 
 

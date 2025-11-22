@@ -56,7 +56,7 @@ do
                 echo "Test & Record vla policy: $nobj, train room: $nroom, episode: $nepisode, cuda:$cuda_id, task:$Task_Name, config: $Config_Dir, type: $Object_Type"
                 python play.py --headless --video --video_length 6000 --num_envs 1 --device cuda:0 \
                 --task $Task_Name --config $Config_Dir --type $Object_Type --group $Object_Group --index $nobj --room_index $nroom \
-                --record_trajectory --record_episode 10 --record_split test --vla_mode --vla_name diffusionvla --vla_action -1 --vla_action_frame base
+                --record_trajectory --record_episode 10 --record_split test --vla_mode --vla_name mobilemanivla --vla_action -1 --vla_action_frame base
                 # # Test & Record vla policy in test set
                 # echo "Test & Record dedicated policy: $nobj, test room: $nroom, episode: $nepisode, cuda:$cuda_id, task:$Task_Name, config: $Config_Dir, type: $Object_Type"
                 # python play.py --headless --video --video_length 6000 --num_envs 1 --device cuda:0 \
