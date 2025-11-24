@@ -1,7 +1,28 @@
-# MobileManipVLA
-Mobile Manipulation Benchmark based on IsaacSim and IsaacLab
+# <p align="center"> MobileManiBench: Simplifying Model Verification for Mobile Manipulation </p>
 
-## Folder
+### <p align="center"> Microsoft Research Asia </p>
+
+<!-- ### <p align="center">[ArXiv](https://arxiv.org/abs/2412.02699) | [Website](https://dexhand.github.io/UniGraspTransformer/) -->
+
+<p align="center">
+  <img width="100%" src="teaser.png"/>
+</p>
+Overview of <b>MobileManiBench</b>. It features 2 mobile-based robots: the G1 robot with a parallel gripper and the XHand robot with a dexterous hand. 
+The benchmark includes 640 articulated and holistic objects across 20 categories and supports 5 mobile manipulation skills—open, close, pull, push, and pick—enabling over 100 tasks. 
+To efficiently scale data generation while ensuring task success, we train a universal <b>MobileManiRL</b> policy for each robot-object-skill triplet and generate <b>MobileManiDataset</b> across 100 realistic scenes with 300K trajectories and 3 data modalities—language instructions, multi-view RGB-depth-segmentation images, synchronized object/robot states and actions. 
+MobileManiBench offers a flexible testbed to accelerate model innovation and data-efficiency research for VLA models.
+</p>
+
+
+# I. TODO List
+- [x] MobileManiBench code and assets for IssacSim.
+- [ ] MobileManiRL checkpoints.
+- [ ] MobileManiDataset.
+- [ ] MobileManiVLA.
+
+
+# II. Get Started
+## Folder Structure:
 ```
 PROJECT
     └── MobileManiBench
@@ -27,8 +48,8 @@ PROJECT
     |
     └── Assets
         └── room
-            └── GenieSimAssets
-            └── Isaac
+            └── GenieSim
+            └── IsaacSim
         └── partnet
             └── dataset
             └── process
@@ -36,8 +57,8 @@ PROJECT
             └── dataset
             └── process
         └── ycb
-        └── xhand_robot
-        └── g1_robot
+        └── xhand_robot_rotate
+        └── g1_robot_rotate
     |
     └── Logs
         └── MobileManiDataset
@@ -96,3 +117,56 @@ pip install -e .
 pip install packaging ninja
 pip install "flash-attn==2.5.5" --no-build-isolation
 ```
+Recommend: Driver 550.x; Cuda 12.x; Ubuntu 22.04 LTS
+
+
+### Download Assets
+
+Download processed USD files of the robots, objects, and scenes from [Assets](https://drive.google.com/file/d/1bn58o0VZw4iZMwoCJDCM3E-MLm-cRjR8/view?usp=sharing).
+```
+pip install gdown
+gdown --fuzzy https://drive.google.com/file/d/1bn58o0VZw4iZMwoCJDCM3E-MLm-cRjR8/view?usp=sharing
+```
+
+# III. Train MobileManiRL and Generate MobileManiDataset
+## Step1: Train&Test Dedicated MobileManiRL Policy:
+```
+cd PROJECT/MobileManiBench/unimanip/rsl_ppo/
+```
+
+Train 0-9 objects in 10 runs, using G1/XHand robots, 
+with (open, pull, pick)/(close, push) skills, on ycb/partnet/unidoor objects, on local devices:
+```
+bash train_parallel.sh 0 9 10 Isaac-G1-Robot-Direct-v0 train_g1_robot_open_best_0.yaml ycb ycb local
+bash train_parallel.sh 0 9 10 Isaac-XHand-Robot-Direct-v0 train_xhand_robot_open_best_0.yaml partnet laptop local
+
+bash train_parallel.sh 0 9 10 Isaac-G1-Robot-Direct-v0 train_g1_robot_close_best_0.yaml partnet cart local
+bash train_parallel.sh 0 9 10 Isaac-XHand-Robot-Direct-v0 train_xhand_robot_close_best_0.yaml unidoor cabinet local
+```
+
+## Step2: Generate MobileManiDataset:
+```
+cd PROJECT/MobileManiBench/unimanip/rsl_ppo/
+```
+
+Record 0-9 objects in 10 runs, across 0-15 training scenes, using G1/XHand robots, 
+with (open, pull, pick)/(close, push) skills, on ycb/partnet/unidoor objects, from ppo policies:
+```
+bash record_parallel.sh 0 9 10 0 15 Isaac-G1-Robot-Direct-v0 train_g1_robot_open_best_0.yaml ycb ycb ppo
+bash record_parallel.sh 0 9 10 0 15 Isaac-XHand-Robot-Direct-v0 train_xhand_robot_open_best_0.yaml partnet laptop ppo
+
+bash record_parallel.sh 0 9 10 0 15 Isaac-G1-Robot-Direct-v0 train_g1_robot_close_best_0.yaml partnet cart ppo
+bash record_parallel.sh 0 9 10 0 15 Isaac-XHand-Robot-Direct-v0 train_xhand_robot_close_best_0.yaml unidoor cabinet ppo
+```
+
+
+# IV. Download MobileManiDataset (Coming Soon)
+
+# V. Test Pre-Trained MobileManiVLA (Coming Soon)
+Check record_infer_vla.sh
+```
+cd PROJECT/MobileManiBench/unimanip/rsl_ppo/
+bash record_infer_vla.sh
+```
+
+# VI. Train MobileManiVLA from scratch (Coming Soon)
