@@ -189,7 +189,7 @@ class UniManipEnvCfg(DirectRLEnvCfg):
         markers={
             "handle": sim_utils.SphereCfg(
                 radius=0.04,
-                visual_material=sim_utils.PreviewSurfaceCfg(diffuse_color=(0.2, 1.0, 0.2)),
+                visual_material=sim_utils.PreviewSurfaceCfg(diffuse_color=(1.0, 0.2, 0.2)),
             ),
         },
     )
@@ -200,7 +200,7 @@ class UniManipEnvCfg(DirectRLEnvCfg):
         markers={
             "goal": sim_utils.SphereCfg(
                 radius=0.04,
-                visual_material=sim_utils.PreviewSurfaceCfg(diffuse_color=(1.0, 0.2, 0.2)),
+                visual_material=sim_utils.PreviewSurfaceCfg(diffuse_color=(0.2, 1.0, 0.2)),
             ),
         },
     )
