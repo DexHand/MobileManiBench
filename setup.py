@@ -18,6 +18,7 @@ INSTALL_REQUIRES = [
     'opencv-python',
     'rsl-rl-lib==2.2.4',
     'numba==0.61.2',
+    'wandb==0.20.0',
 ]
 
 # Installation operation

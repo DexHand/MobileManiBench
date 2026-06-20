@@ -1,8 +1,8 @@
-# <p align="center"> MobileManiBench: Simplifying Model Verification for Mobile Manipulation </p>
+# <p align="center"> MobileManiBench: Simplifying Model Verification <br> for Mobile Manipulation </p>
 
 ### <p align="center"> Microsoft Research Asia </p>
 
-<!-- ### <p align="center">[ArXiv](https://arxiv.org/abs/2412.02699) | [Website](https://dexhand.github.io/UniGraspTransformer/) -->
+### <p align="center">[ArXiv](https://arxiv.org/abs/2602.05233) | [Website](https://dexhand.github.io/MobileManiBench_Website/)
 
 <p align="center">
   <img width="100%" src="teaser.png"/>
@@ -16,9 +16,9 @@ MobileManiBench offers a flexible testbed to accelerate model innovation and dat
 
 # I. TODO List
 - [x] MobileManiBench code and assets for IssacSim.
-- [ ] MobileManiRL checkpoints.
-- [ ] MobileManiDataset.
-- [ ] MobileManiVLA.
+- [x] MobileManiRL checkpoints.
+- [x] MobileManiDataset.
+- [x] MobileManiVLA.
 
 
 # II. Get Started
@@ -62,17 +62,22 @@ PROJECT
     |
     └── Logs
         └── MobileManiDataset
-            └── XHand_Robot
-                └── Best_0
-                    └── Open
-                        └── partnet
-                        └── unidoor
-                        └── ycb
-                    └── Close
             └── G1_Robot
+                └── Open
+                    └── partnet
+                        └── box
+                        └── ...
+                    └── unidoor
+                        └── cabinet
+                        └── ...
+                    └── ycb
+                        └── ycb
+                └── Close
+            └── XHand_Robot
 ```
 
 ## Installation
+Recommend: Driver 550.x; Cuda 12.x; Ubuntu 22.04 LTS
 
 ### 1. Create virtual environment
 ```bash
@@ -117,7 +122,6 @@ pip install -e .
 pip install packaging ninja
 pip install "flash-attn==2.5.5" --no-build-isolation
 ```
-Recommend: Driver 550.x; Cuda 12.x; Ubuntu 22.04 LTS
 
 
 ### Download Assets
@@ -161,6 +165,7 @@ bash record_parallel.sh 0 9 10 0 15 Isaac-XHand-Robot-Direct-v0 train_xhand_robo
 
 
 # IV. Download MobileManiDataset (Coming Soon)
+
 
 # V. Test Pre-Trained MobileManiVLA (Coming Soon)
 Check record_infer_vla.sh
