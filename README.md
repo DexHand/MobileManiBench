@@ -85,7 +85,7 @@ conda create -n mobilemanibench python==3.10 -y
 conda activate mobilemanibench
 ```
 
-### 2. Update GLIBC (Ubuntu20.04)
+### 2. Update GLIBC (For Ubuntu20.04)
 Modify apt sources:
 ```bash
 sudo nano /etc/apt/sources.list
@@ -126,10 +126,11 @@ pip install "flash-attn==2.5.5" --no-build-isolation
 
 ### Download Assets
 
-Download processed USD files of the robots, objects, and scenes from [Assets](https://drive.google.com/file/d/1bn58o0VZw4iZMwoCJDCM3E-MLm-cRjR8/view?usp=sharing).
+Download USD files for robots, objects, and scenes from [Hugging Face](https://huggingface.co/datasets/arnoldland/MobileManiBench).
 ```
-pip install gdown
-gdown --fuzzy https://drive.google.com/file/d/1bn58o0VZw4iZMwoCJDCM3E-MLm-cRjR8/view?usp=sharing
+cd PROJECT
+hf download arnoldland/MobileManiBench Assets.zip --repo-type dataset --local-dir ./
+unzip Assets.zip
 ```
 
 # III. Train MobileManiRL and Generate MobileManiDataset
@@ -164,7 +165,20 @@ bash record_parallel.sh 0 9 10 0 15 Isaac-XHand-Robot-Direct-v0 train_xhand_robo
 ```
 
 
-# IV. Download MobileManiDataset (Coming Soon)
+# IV. Download MobileManiDataset
+
+Download the entire MobileManiDataset from [Hugging Face](https://huggingface.co/datasets/arnoldland/MobileManiBench).
+```
+cd PROJECT/Logs
+hf download arnoldland/MobileManiBench --repo-type dataset --local-dir ./
+```
+
+Download one robot/task/object.tar from [Hugging Face](https://huggingface.co/datasets/arnoldland/MobileManiBench).
+```
+cd PROJECT/Logs
+hf download arnoldland/MobileManiBench MobileManiDataset/G1_Robot/Open/partnet/box.tar --repo-type dataset --local-dir ./
+tar -xf MobileManiDataset/G1_Robot/Open/partnet/box.tar -C MobileManiDataset/
+```
 
 
 # V. Test Pre-Trained MobileManiVLA (Coming Soon)
