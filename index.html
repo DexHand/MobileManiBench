@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="MobileManiBench: Simplifying Model Verification for Mobile Manipulation.">
+    <meta name="keywords" content="MobileManiBench">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> MobileManiBench: Simplifying Model Verification for Mobile Manipulation </title>
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="./static/js/fontawesome.all.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script>
+    <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-2 publication-title"> MobileManiBench: Simplifying Model Verification for Mobile Manipulation </h1>
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block">
+                            <a href="https://wenbwa.github.io">Wenbo Wang</a>,
+                        </span>
+                        <span class="author-block">
+                            <a href="https://scholar.google.com/citations?hl=zh-CN&user=-ncz2s8AAAAJ">Fangyun Wei</a>,
+                        </span>
+                        <span class="author-block">
+                            <a href="https://scholar.google.com/citations?user=kGwtKVcAAAAJ&hl=en&oi=ao">QiXiu Li</a>,
+                        </span>
+                        <span class="author-block">
+                            <a href="https://openreview.net/profile?id=~Xi_Chen55">Xi Chen</a>,
+                        </span>
+                        <span class="author-block">
+                            <a href="https://scholar.google.com/citations?user=z92gIuEAAAAJ&hl=en&oi=ao">Yaobo Liang</a>,
+                        </span>
+                        <span class="author-block">
+                            <a href="https://scholar.google.com/citations?user=N4F_3eoAAAAJ&hl=en">Chang Xu</a>,
+                        </span>
+                        <span class="author-block">
+                            <a href="https://scholar.google.com/citations?hl=en&user=GuqoolgAAAAJ">Jiaolong Yang</a>,
+                        </span>
+                        <span class="author-block">
+                            <a href="https://scholar.google.com/citations?user=h4kYmRYAAAAJ&hl=en">Baining Guo</a>
+                        </span>
+                    </div>
+                    
+                    <br>
+                    <div class="is-size-5 publication-authors">
+                        <span class="author-block">Microsoft Research Asia</span>
+                    </div>
+
+                    <!-- <br> -->
+                    <!-- <div class="is-size-5 publication-authors">
+                        <span class="author-block">2025</span>
+                    </div> -->
+
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <!-- PDF Link. -->
+                            <span class="link-block">
+                                <a href="https://arxiv.org/abs/2602.05233" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        <i class="fas fa-file-pdf"></i>
+                                    </span>
+                                    <span>Paper</span>
+                                </a>
+                            </span>
+                            <!-- Code Link. -->
+                            <span class="link-block">
+                                <a href="https://github.com/DexHand/MobileManiBench" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>Code</span>
+                                </a>
+                            </span>
+                            <!-- Dataset Link. -->
+                            <span class="link-block">
+                                <a href="https://huggingface.co/datasets/arnoldland/MobileManiBench/tree/main" class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        <i class="fas fa-database"></i>
+                                    </span>
+                                    <span>Dataset</span>
+                                </a>
+                            </span>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section" id="system">
+    <div class="container is-max-desktop">
+
+        <!-- <div style="text-align: center;">
+            <video poster="" id="grasp_video" autoplay controls muted loop height="100%">
+                <source src="assets/videos/grasp_real.mp4" type="video/mp4">
+            </video>
+            <p>
+                <br>
+                <b>Real-World Deployment of our UniGraspTransformer.</b>
+                <br><br>
+            </p>
+        </div>
+        <hr> -->
+        
+        <!-- <div style="text-align: center;">
+            <video poster="" id="grasp_video" autoplay controls muted loop height="100%">
+                <source src="assets/videos/grasp_simu.mp4" type="video/mp4">
+            </video>
+            <p>
+                <br>
+                <b>Simulation Results of our UniGraspTransformer.</b>
+                <br><br>
+            </p>
+        </div>
+        <hr> -->
+
+        <div style="text-align: center;">
+            <img src="assets/teaser.png" class="center"/>
+        </div>
+        <p>
+            <br>
+            Overview of <b>MobileManiBench</b>. It features 2 mobile-based robots: the G1 robot with a parallel gripper and the XHand robot with a dexterous hand. 
+            The benchmark includes 630 articulated and holistic objects across 20 categories and supports 5 mobile manipulation skills—open, close, pull, push, and pick—enabling over 100 tasks. 
+            To efficiently scale data generation while ensuring task success, we train a universal <b>MobileManiRL</b> policy for each robot-object-skill triplet and generate <b>MobileManiDataset</b> across 100 realistic scenes with 300K trajectories and 3 data modalities—language instructions, multi-view RGB-depth-segmentation images, synchronized object/robot states and actions. 
+            MobileManiBench offers a flexible testbed to accelerate model innovation and data-efficiency research for VLA models.
+            <br><br>
+        </p>
+        <hr>
+        
+    </div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        Vision-language-action models have advanced robotic manipulation but remain constrained by reliance on the large, teleoperation-collected datasets dominated by the static, tabletop scenes. 
+                        We propose a simulation-first framework to verify VLA architectures before real-world deployment and introduce MobileManiBench, a large-scale benchmark for mobile-based robotic manipulation. 
+                        Built on NVIDIA Isaac Sim and powered by reinforcement learning, our pipeline autonomously generates diverse manipulation trajectories with rich annotations (language instructions, multi-view RGB-depth-segmentation images, synchronized object/robot states and actions). 
+                        MobileManiBench features 2 mobile platforms (parallel-gripper and dexterous-hand robots), 2 synchronized cameras (head and right wrist), 630 objects in 20 categories, 5 skills (open, close, pull, push, pick) with over 100 tasks performed in 100 realistic scenes, yielding 300K trajectories. 
+                        This design enables controlled, scalable studies of robot embodiments, sensing modalities, and policy architectures, accelerating research on data efficiency and generalization. 
+                        We benchmark representative VLA models and report insights into perception, reasoning, and control in complex simulated environments.
+                        <br><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paper video. -->
+        <!-- <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Project Video</h2>
+                <video poster="" id="grasp_video" controls muted loop height="100%">
+                    <source src="assets/videos/grasp_video.mp4" type="video/mp4">
+                </video>
+                <br><br>
+            </div>
+        </div> -->
+        <!-- Paper video. -->
+        <!-- <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Paper Video</h2>
+                <div class="publication-video">
+                <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        
+                </div>
+            </div>
+        </div> -->
+      <!--/ Paper video. -->
+    </div>
+</section>
+
+<hr>
+
+
+<section class="section"  id="MobileManiRL">
+    <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">MobileManiRL</h2>
+        <div style="text-align: center;">
+            <img src="assets/points.png" style="width: 600px; height: auto;" class="center"/>
+        </div>
+        <p>
+            <br>
+            Given that MobileManiBench involves <b>2</b> mobile-based robots, <b>630</b> objects across <b>20</b> categories, <b>5</b> manipulation skills, and over <b>100</b> tasks, 
+            teleoperating or manually designing policies for each configuration would be prohibitively time-consuming. 
+            
+            <br><br>
+            To address this, we propose a universal state-based reinforcement learning (RL) policy, termed <b>MobileManiRL</b>, 
+            which parameterizes each robot-object-skill combination using keypoint-based displacements of the <b>robot gripper/hand points</b>, the <b>object grasp point</b>, and the <b>goal point</b>. 
+            A universal reward function encourages the robot's gripper/hand points to reach the object grasp point and transport it to the goal point. 
+            This formulation enables a single RL policy to generalize across diverse manipulation scenarios while maintaining task-specific success.
+        </p>
+        <br>
+
+        <div style="text-align: center;">
+            <video poster="" id="grasp_video" autoplay controls muted loop height="100%">
+                <source src="assets/videos/MobileManiRL.mp4" type="video/mp4">
+            </video>
+            <p>
+                MobileManiRL training for the G1 robot and XHand robot in tabletop and ground scenes.
+                <br><br>
+            </p>
+        </div>
+        <hr>
+    </div>
+</section>
+
+
+
+<section class="section"  id="MobileManiDataset">
+    <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">MobileManiDataset</h2>
+        <br>
+        <div style="text-align: center;">
+            <img src="assets/objects.png" style="width: 1000px; height: auto;" class="center"/>
+        </div>
+        <p>
+            <br>
+            For each of the G1 robot and the XHand robot, MobileManiDataset comprises <b>630</b> objects across <b>20</b> categories, manipulated through <b>5</b> skills and over <b>100</b> tasks using <b>1,182</b> robot-object-skill combinations of MobileManiRL, which are further distributed across <b>100</b> scene placements. 
+            The dataset is split into 506 objects and 80 scenes for VLA training, plus 124 objects and 20 scenes for testing, yielding a total of 15,232 robot-object-skill-scene combinations for training and 920 combinations for testing. 
+            <br><br>
+            For each training combination, we generate <b>10</b> successful manipulation trajectories in Isaac Sim, resulting in <b>150K</b> training trajectories. 
+            Each manipulation trajectory is recorded at 30 FPS with an average length of 160 frames, including one natural language instruction; synchronized 520x520 RGB, depth, and segmentation images from both head-view and wrist-view cameras; the corresponding object and robot states; and the executed (6+D) dimensional action at each timestep. 
+            All states and actions are recorded in the global world coordinate frame.
+        </p>
+        <br>
+
+        <div style="text-align: center;">
+            <video poster="" id="grasp_video" autoplay controls muted loop height="100%">
+                <source src="assets/videos/MobileManiDataset_G1_Robot.mp4" type="video/mp4">
+            </video>
+            <p>
+                <h3>MobileManiDataset trajectories for the G1 robot.</h3>
+                <br><br>
+            </p>
+        </div>
+
+        <div style="text-align: center;">
+            <video poster="" id="grasp_video" autoplay controls muted loop height="100%">
+                <source src="assets/videos/MobileManiDataset_XHand_Robot.mp4" type="video/mp4">
+            </video>
+            <p>
+                <h3>MobileManiDataset trajectories for the XHand robot.</h3>
+                <br><br>
+            </p>
+        </div>
+
+        <hr>
+    </div>
+</section>
+
+
+
+<section class="section"  id="MobileManiVLA">
+    <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">MobileManiVLA</h2>
+        <div style="text-align: center;">
+            <img src="assets/vla.png" style="width: 800px; height: auto;" class="center"/>
+            <p>
+                <br>
+                Following CogACT, we structure our MobileManiVLA into three components: the vision, language, and action modules.
+                <br>
+            </p>
+        </div>
+
+        <hr>
+    </div>
+</section>
+
+
+<section class="section"  id="Experiment Results">
+    <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Experiment Results</h2>
+        <hr>
+        <div style="text-align: center;">
+            <img src="assets/table_large.png" style="width: 900px; height: auto;" class="center"/>
+        </div>
+        <p>
+            <br>
+            Success rates of <b>MobileManiRL</b> and <b>MobileManiVLA</b> on the G1 robot and XHand robot across <b>20</b> object categories and <b>5</b> mobile manipulation skills.
+            MobileManiRL is evaluated on seen objects with 1024 episodes per robot-object-skill combination, whereas MobileManiVLA is evaluated on unseen objects and scenes, with 10 episodes per robot-object-skill-scene combination. 
+            Both experiments are conducted with randomized robot initial poses to assess robustness.
+            <br><br>
+        </p>
+        <hr>
+
+        <div style="text-align: center;">
+            <img src="assets/table_small.png" style="width: 500px; height: auto;" class="center"/>
+            <p>
+                <br>
+                Success rates of <b>MobileManiRL</b> and <b>MobileManiVLA</b> on the G1 robot and XHand robot across <b>5</b> manipulation skills.
+                <br><br>
+            </p>
+        </div>
+        <hr>
+        
+<!-- 
+        <div style="text-align: center;">
+            <img src="assets/diversity_curve.png" style="width: 600px; height: auto;" class="center"/>
+        </div>
+        <p>
+            <br>
+            <b>Quantitative comparison of grasp pose diversity.</b> 
+            Compared to UniDexGrasp++, our UniGraspTransformer demonstrates a broader range of grasping strategies, highlighting its ability to generate diverse grasping poses across a variety of objects.
+            <br><br>
+        </p>
+        <hr>
+        
+        <div style="text-align: center;">
+            <img src="assets/diversity_pose.png" style="width: 1000px; height: auto;" class="center"/>
+        </div>
+        <p>
+            <br>
+            <b>Qualitative comparison of grasp pose diversity.</b> 
+            (a) Using iterative online distillation, UniDexGrasp++ tends to grasp different objects through similar poses, with two middle fingers twisted and floated.
+            (b) Using large-model offline distillation, our UniGraspTransformer adapts to objects of varying shapes, employing a diverse range of grasp poses.
+            <br><br>
+        </p>
+        <hr> -->
+
+    </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <!-- <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://wenbwa.github.io/UniGraspTransformer/">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://wenbwa.github.io/UniGraspTransformer/" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div> -->
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This webpage is built with the template from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>. We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
