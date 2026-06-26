@@ -2,7 +2,7 @@
 
 ### <p align="center"> Microsoft Research Asia </p>
 
-### <p align="center">[ArXiv](https://arxiv.org/abs/2602.05233) | [Website](https://dexhand.github.io/MobileManiBench_Website/)
+### <p align="center">[ArXiv](https://arxiv.org/abs/2602.05233) | [Website](https://dexhand.github.io/MobileManiBench/) | [Dataset](https://huggingface.co/datasets/arnoldland/MobileManiBench/tree/main)
 
 <p align="center">
   <img width="100%" src="teaser.png"/>
@@ -18,7 +18,6 @@ MobileManiBench offers a flexible testbed to accelerate model innovation and dat
 - [x] MobileManiBench code and assets for IssacSim.
 - [x] MobileManiRL checkpoints.
 - [x] MobileManiDataset.
-- [x] MobileManiVLA.
 
 
 # II. Get Started
@@ -26,7 +25,6 @@ MobileManiBench offers a flexible testbed to accelerate model innovation and dat
 ```
 PROJECT
     └── MobileManiBench
-        └── MobileManiVLA
         └── source
             └── isaaclab_tasks/isaaclab_tasks/direct
                 └── xhand_robot
@@ -115,22 +113,14 @@ cd MobileManiBench
 pip install -e .
 ```
 
-### 5. Install MobileManiVLA
-```bash
-cd MobileManiVLA
-pip install -e .
-pip install packaging ninja
-pip install "flash-attn==2.5.5" --no-build-isolation
-```
-
 
 ### Download Assets
 
 Download USD files for robots, objects, and scenes from [Hugging Face](https://huggingface.co/datasets/arnoldland/MobileManiBench).
 ```
 cd PROJECT
-hf download arnoldland/MobileManiBench Assets.zip --repo-type dataset --local-dir ./
-unzip Assets.zip
+hf download arnoldland/MobileManiBench Assets/Assets.zip --repo-type dataset --local-dir ./
+unzip Assets/Assets.zip -d ./
 ```
 
 # III. Train MobileManiRL and Generate MobileManiDataset
@@ -179,13 +169,3 @@ cd PROJECT/Logs
 hf download arnoldland/MobileManiBench MobileManiDataset/G1_Robot/Open/partnet/box.tar --repo-type dataset --local-dir ./
 tar -xf MobileManiDataset/G1_Robot/Open/partnet/box.tar -C MobileManiDataset/
 ```
-
-
-# V. Test Pre-Trained MobileManiVLA (Coming Soon)
-Check record_infer_vla.sh
-```
-cd PROJECT/MobileManiBench/unimanip/rsl_ppo/
-bash record_infer_vla.sh
-```
-
-# VI. Train MobileManiVLA from scratch (Coming Soon)

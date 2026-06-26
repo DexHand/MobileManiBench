@@ -7,7 +7,7 @@ class UniManipTrajectoryDataset(Dataset):
     def __init__(self, text_tokenizer, image_transform, prompt_builder_fn,
                  action_past_window_size=0, action_future_window_size=0, image_past_window_size=0, image_future_window_size=0,
                  image_augmentation=False, predict_stop_token=False, normalization=False, processor=None,
-                 dataset_dir=osp.join(LOG_DIR, 'MobileManiDataset/G1_Robot/Best_0'), dataset_mode='entire_depth'):
+                 dataset_dir=osp.join(LOG_DIR, 'MobileManiDataset/G1_Robot'), dataset_mode='entire_depth'):
         # init dataset info
         self.dataset_dir = dataset_dir
         self.dataset_mode = dataset_mode
